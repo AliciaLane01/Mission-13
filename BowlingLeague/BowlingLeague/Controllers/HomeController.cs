@@ -20,7 +20,9 @@ namespace BowlingLeague.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var bowlers = _repo.Bowlers.ToList();
+
+            return View(bowlers);
         }
     }
 }
